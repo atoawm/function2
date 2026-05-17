@@ -14,7 +14,25 @@ Your battery: 80%
 Your battery: 100%
 Battery fully charge
 */
+#include <iostream>
+using namespace std;
+
+void bat(float &battery){
+    battery += 20;
+}
 
 int main(){
     float battery = 0;
+    cout<<"Your battery: "<<battery<<"%"<<"\n";
+    while (true){
+        if (battery<100){
+            bat(battery);
+            cout<<"Your battery: "<<battery<<"%"<<"\n";
+        }else{
+            cout<<"Battery fully charge";
+            break;
+        }
+    }
+
+return 0;
 }

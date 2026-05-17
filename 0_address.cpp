@@ -8,7 +8,7 @@
 1 0x61ff0c
 0x61ff08
 */
-#include<iostream>
+#include <iostream>
 
 using namespace std;
 
@@ -18,4 +18,5 @@ int main(){
     cin >> a;
     cout << a << " " << &a << "\n";
     cout << b;
+return 0;
 }

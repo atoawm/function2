@@ -23,19 +23,31 @@ Enemy HP: 0
 The enemy has been defeated
 
 */
+#include <iostream>
+using namespace std;
+
+void atk(int &hp, int a){
+    hp -= a;
+}
 
 int main(){
     int hp = 100;
-    int a = 0;
-    while (true){
-        cout << "Your attack: "
-        cin >> a;
+    int a;
+    while (true){  
         if(hp>0){
+            cout << "Your attack: ";
+            cin >> a;
             atk(hp,a);
+            cout << "Enemy HP: ";
+            cout << hp << "\n";
+            cout << "--------------"<<"\n";
         }
         else{
             cout << "The enemy has been defeated";
             break;
         }
     }
+    
+
+    return 0;
 }

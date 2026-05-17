@@ -11,8 +11,24 @@
 4 2
 3 1
 */
+#include <iostream>
+using namespace std;
+
+void swap(int x[][2]){
+    int a;
+    int b;
+    int c;
+    int d;
+    cin >> a >> b;
+    cin >> c >> d;
+    int y = x[a][b];
+    x[a][b] = x[c][d];
+    x[c][d] = y;
+}
 
 int main(){
-    int a[2][2] = {{1,2},{3,4}};
-    
+    int x[2][2] = {{1,2},{3,4}};
+    swap(x);
+    cout << x[0][0] <<" "<< x[0][1]<<"\n"<<x[1][0]<< " "<< x[1][1];
+return 0;
 }

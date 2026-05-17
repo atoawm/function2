@@ -9,11 +9,19 @@
 a = 0
 b = 1
 */
+#include <iostream>
+using namespace std;
 
+void swap(int a,int b){
+    int c=b;
+    b = a;
+    a = c;
+}
 
 int main(){
     int a = 0;
     int b = 1;
     swap(a,b);
     cout << "a = " << a << "\nb = " << b;
+return 0;
 }
